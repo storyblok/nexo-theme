@@ -1,0 +1,6 @@
+{{ blok._editable }}
+<ul class="uk-grid uk-grid-medium uk-flex uk-flex-center">
+  {% for item in blok.body %}
+    <li>{% include item.component with blok: item %}</li>
+  {% endfor %}
+</ul>

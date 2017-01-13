@@ -1,0 +1,20 @@
+{{ blok._editable }}
+<article class="uk-article">
+  {% if blok.top_image != blank %}
+    <img class="uk-margin-bottom" src="{{ blok.top_image }}" />
+  {% endif %}
+
+  {% if blok.title != blank %}
+    <h1 class="uk-article-title">{{ blok.title }}</h1>
+  {% endif %}
+
+  {{ blok.body | markdown }}
+
+  {% if blok.bottom_image != blank %}
+    <img class="uk-margin-top uk-margin-bottom" src="{{ blok.bottom_image}}" />
+  {% endif %}
+
+  {% for item in blok.bottom %}
+    {% include item.component with blok: item %}
+  {% endfor %}
+</article>

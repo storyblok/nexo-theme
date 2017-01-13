@@ -1,0 +1,10 @@
+{{ blok._editable }}
+<div class="uk-block {{ blok.styles }} {{ blok.type }}">
+  <div class="uk-container uk-container-center">
+
+    {% for item in blok.body %}
+      {% include item.component with blok: item %}
+    {% endfor %}
+
+  </div>
+</div>

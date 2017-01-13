@@ -1,0 +1,18 @@
+{{ blok._editable }}
+<div class="gallery">
+  {% if blok.headline != blank %}
+    <h3 class="uk-margin-large uk-text-center">
+      {{ blok.headline }}
+    </h3>
+  {% endif %}
+
+  <div class="uk-grid uk-grid-small uk-grid-width-medium-1-3 uk-grid-match" data-uk-grid-margin>
+    {% for item in blok.body %}
+    <div>
+      <div class="uk-panel">
+          {% include item.component with iblok: item, uid: blok._uid %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

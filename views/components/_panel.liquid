@@ -1,0 +1,15 @@
+{{ blok._editable }}
+<div class="uk-panel{% if blok.center_text %} uk-text-center{% endif %}">
+  {% if blok.image != blank %}
+    <div class="uk-margin-large"><img src="{{ blok.image }}" alt="{{ blok.image_description }}"></div>
+  {% endif %}
+  {% if blok.headline != blank %}
+    <h3 class="uk-h2">{{ blok.headline }}</h3>
+  {% endif %}
+  <p>
+    {{ blok.body }}
+  </p>
+  {% if blok.link_label != blank %}
+    <p><a href="{{ blok.link | url }}">{{ blok.link_label }}</a></p>
+  {% endif %}
+</div>

@@ -1,0 +1,28 @@
+{{ blok._editable }}
+<div id="tm-hero" class="tm-hero uk-block uk-block-large uk-cover-background uk-flex uk-flex-middle uk-height-viewport{% if blok.style == 'white' %} uk-contrast{% endif %}"{% if blok.image %} style="background-image: url({{ blok.image }});"{% endif %}>
+  <div class="uk-container uk-container-center">
+
+    <section class="uk-grid uk-grid-match" data-uk-grid-margin>
+      <div class="uk-width-medium-1-1">
+
+        <div class="uk-panel uk-text-center">
+          {% if blok.pre_header != blank %}
+            <p class="cm-text-uppercase">{{ blok.pre_header }}</p>
+          {% endif %}
+
+          <h1 class="uk-heading-large uk-margin-large-bottom{% if blok.pre_header != blank %} uk-margin-top-remove{% endif %}">{{ blok.headline | newline_to_br }}</h1>
+
+          {% if blok.link_label != blank %}
+            <a class="uk-button uk-button-large" href="{{ blok.link | url }}">{{ blok.link_label }}</a>
+          {% endif %}
+
+          {% for item in blok.bottom %}
+            {% include item.component with blok: item %}
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</div>
