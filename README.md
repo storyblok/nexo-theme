@@ -8,7 +8,7 @@ Checkout the [theme documentation](https://www.storyblok.com/docs/Rendering-Serv
 
 ## Getting started
 
-1. Clone the repository ```git clone https://github.com/storyblok/city-theme```
+1. Clone the repository ```git clone https://github.com/storyblok/nexo-theme```
 2. Rename ```_token.js``` to ```token.js``` and insert your theme token. You can find your theme token in the space settings of the [Storyblok app](https://app.storyblok.com).
 3. Replace INSERT_SPACE_ID with your space id and INSERT_YOUR_DOMAIN with your domain in ```config.js```. You can find your space id and domain in the space settings.
 4. Run ```npm install```
