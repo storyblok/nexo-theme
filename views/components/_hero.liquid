@@ -6,6 +6,10 @@
       <div class="uk-width-medium-1-1">
 
         <div class="uk-panel uk-text-center">
+          {% if params._storyblok %}
+            <a class="uk-button uk-button-small" href="https://github.com/storyblok/nexo-theme" target="_blank">Checkout the repository</a> if you want to edit the template.
+          {% endif %}
+
           {% if blok.pre_header != blank %}
             <p class="cm-text-uppercase">{{ blok.pre_header }}</p>
           {% endif %}
